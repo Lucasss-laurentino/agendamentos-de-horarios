@@ -1,0 +1,23 @@
+.btn_hora {
+    background-color: white;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-bottom-color: blue;
+    border-top-color: blue;
+    border-left-color: red;
+    border-right-color: red;
+}
+
+#sair_disabled {
+    font-size: 20px;
+    margin-right: 60px;
+}
+#sair {
+    font-size: 20px;
+    margin-right: 60px;
+}
+
+#linha_sair {
+    margin-right: 20px;
+}
