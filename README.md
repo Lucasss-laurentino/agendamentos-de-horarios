@@ -40,9 +40,11 @@ Esse projeto ilustra agendamento de horários de uma barbearia
 ## Funcionalidades
 
 <p>Após se cadastrar o usuário é redirecionado para pagina de login, quando efetuado o login é mostrado uma tabela com todos horários disponíveis,
-ao clicar em cima do horário automaticamento o usuário é marcado e redirecionado á uma pagina com o horário escolhido e a opção de desmarcar</p>
+ao clicar em cima do horário automaticamente o usuário é marcado e redirecionado á uma pagina com o horário escolhido e a opção de desmarcar</p>
 
 <p>Envio de e-mail para recuperação de senha</p>
 
 <p>Para ter acesso ao painel administrativo é necessário setar manualmente no banco o campo "admin" para 1 e depois fazer o login normalmente, ao logar o administrador será redirecionado para
- uma página com a opção de ver os horários e os usuários, também podendo excluir ou desmarcar um horário ou usuário, ou adicionar um horário.</p>
+ uma página com a opção de ver os horários e os usuários, também podendo excluir ou desmarcar um horário ou usuário.</p>
+
+<p>Todo dia á meia noite todos os horários volta a ficar disponíveis. </p>
