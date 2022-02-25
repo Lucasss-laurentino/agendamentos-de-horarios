@@ -29,13 +29,13 @@ Esse projeto ilustra agendamento de horários de uma barbearia
 <img src="https://user-images.githubusercontent.com/96303722/155774362-1f9c9ed5-2a86-45ce-823c-215581681bc0.png" width="200px"> 
 </div>
 
-## Instalando
+## Rodando o projeto
 
 + <p>Renomeie o arquivo ".env.example" para ".env" na raiz do projeto</p>
 + <p>Configure o banco no arquivo .env da linha 11 á 16 e da linha 31 á 38 para envio de e-mails</p>
 + <p>Vá em "app/mail/redefinir.php" na linha 36 no método "from()" e digite seu email</p>
-+ <p>Após isso, na raiz do projeto abra um terminal faça as migrate e excecute "composer update"</p>
-+ <p>Pronto, agora é só rodar o projeto</p>
++ <p>Após isso, na raiz do projeto abra um terminal faça as migrate com "php artisan migrate" e depois excecute "composer update"</p>
++ <p>Pronto, agora é só rodar o projeto com "php artisan serve"</p>
 
 ## Funcionalidades
 
