@@ -15,7 +15,7 @@
             <tr>
                 <td>{{ session()->get('horario')['hora'];  }}</td>
                 <td>
-                    <button type="button" class="btn btn-danger" onclick="location.href = '/desmarcar/{{ session()->get('horario')['id'] }}'">Desmarcar</button>
+                    <button type="button" class="btn btn-danger" id="desmarcar_horario" onclick="location.href = '/desmarcar/{{ session()->get('horario')['id'] }}'">Desmarcar</button>
                 </td>
             </tr>
         </tbody>

@@ -54,3 +54,5 @@ Route::any('/cadastrar_hora', [UserController::class, 'cadastrar_hora']);
 Route::get('/todos_usuarios', [UserController::class, 'todos_usuarios']);
 
 Route::get('/excluir_usuario/{id}', [UserController::class, 'excluir_usuario']);
+
+Route::get('/desmarcar_horario_adm/{id}', [UserController::class, 'desmarcar_adm']);

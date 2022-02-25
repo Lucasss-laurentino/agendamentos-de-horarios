@@ -78,6 +78,10 @@ class UserController extends Controller
     // ----------Exibir tabela com horários disponíveis ou horario marcado---------------
     public function home(Request $request) {
 
+        $user = Usuario::where('id', session()->get('usuario')['id'])->first()->toArray();
+
+        $request->session()->put('usuario', $user); 
+        
         if(empty(session()->get('usuario'))):
 
             return redirect('/');
@@ -88,12 +92,12 @@ class UserController extends Controller
 
         elseif (!empty(session()->get('usuario')) && session()->get('usuario')['marcado'] == 0):
 
-            $horarios = \DB::table('horarios')->where('reservado', '0')->simplePaginate(6);
+            $horarios = \DB::table('horarios')->where('reservado', '0')->simplePaginate(3);
 
             return view('home', [
                 'horarios' => $horarios
             ]);
-        
+            
         elseif (!empty(session()->get('usuario')) && session()->get('usuario')['marcado'] == 1):
 
             $hora_marcada = Horario::where('hora', session()->get('usuario')['horario_marcada'])->first()->toArray();
@@ -104,6 +108,7 @@ class UserController extends Controller
                 'hora' => $hora
             ]);
         
+
         endif;
     
     }
@@ -320,7 +325,7 @@ class UserController extends Controller
 
     public function todos_usuarios() {
         
-        $usuarios = \DB::table('users')->simplePaginate(6);
+        $usuarios = \DB::table('users')->simplePaginate(3);
 
         return view('todos_usuarios', [
 
@@ -358,5 +363,19 @@ class UserController extends Controller
             return redirect('/');
         
         }
+    }
+
+    // ----------------------------- DESMARCAR HORARIO QUE ADM QUISER -------------------------
+
+    public function desmarcar_adm($id) {
+
+        $horario = Horario::where('id', $id)->first()->toArray();
+        $usuario = Usuario::where('horario_marcada', $horario['hora'])->first()->toArray();
+        
+        Horario::where('id', $horario['id'])->update(['reservado' => 0]);
+        Usuario::where('id', $usuario['id'])->update(['marcado' => 0]);
+        Usuario::where('id', $usuario['id'])->update(['horario_marcada' => '']);
+
+        return redirect('/todos_horarios');
     }
 }

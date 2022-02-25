@@ -3,11 +3,11 @@
 @section('content')
 
     <!--- tabela de horários --->
-    <div id="tabela" class="tabela align-self-start mt-5 col-xs-2 col-sm-2 col-lg-5 col-2" style="width: 50%;">
+    <div id="tabela" class="tabela align-self-center mt-5 col-xs-2 col-sm-2 col-lg-3x col-2" style="width: 50%;">
         <table class="table">
             <thead>
                 <tr>
-                    <td><h4>Horários</h4></td>
+                    <td><h4 id="titulo">Horários</h4></td>
                 </tr>
             </thead>
             <tbody>

@@ -4,7 +4,7 @@
 
     <!--- tabela de horários --->
 
-    <div id="tabela" class="tabela align-self-start mt-5 col-xs-2 col-sm-2 col-lg-5 col-2" style="width: 50%;">
+    <div id="tabela_adm" class="tabela align-self-center mt-2 col-xs-2 col-sm-2 col-lg-5 col-2" style="width: 50%;">
         <div class=" d-flex justify-content-start">
             <button class="mb-3" id="fechar_cadastro" onclick="location.href = '/home'">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
@@ -17,8 +17,7 @@
                 <tr>
                     <td>Hora</td>
                     <td>Nome</td>
-                    <td>Email</td>
-                    <td>Ações</td>
+                    <td celspan="2">Ações</td>
                 </tr>
             </thead>
             <tbody>
@@ -26,8 +25,7 @@
                 <tr>
                 <td>{{ $usuario->horario_marcada }}</td>
                 <td>{{ $usuario->name }}</td>
-                <td>{{ $usuario->email }}</td>
-                <td><button type="button" class="btn btn-danger" id="excluir" onclick="location.href = '/excluir_usuario/{{ $usuario->id }}'" >Excluir</button></td>
+                <td><button type="button" class="btn btn-danger" id="excluir" onclick="location.href = '/excluir_usuario/{{ $usuario->id }}'" ><i class="bi bi-trash-fill"></i></button></td>
                 </tr>
                 @endforeach
             </tbody>
@@ -35,4 +33,7 @@
         {{$usuarios->links()}}
     </div>
     <!--- fim tabela de horarios --->
+    <script src="{{ asset('/js/jquery.js') }}"></script>
+    <script src="{{ asset('/js/responsivo.js') }}"></script>
+
 @endsection

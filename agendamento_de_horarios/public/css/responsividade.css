@@ -1,0 +1,144 @@
+@media(max-width: 768px) {
+
+/* login */
+
+input#email_login {
+    height: 23px;
+    font-size: 13px;
+}
+
+input#password_login {
+    height: 23px;
+    font-size: 13px;
+}
+
+button#logar {
+
+    height: 23px;
+    font-size: 11px;
+
+}
+
+div#div_btn_fechar {
+    height: 28px;
+}
+
+div#div_formulario_login {
+    margin-top: 20px;
+}
+
+a#link_recuperar_senha {
+    font-size: 10px;
+}
+
+p#erros_login {
+    font-size: 10px;
+}
+
+
+/* cadastrar */
+
+input#login_cadastrar {
+    height: 23px;
+    font-size: 10px;
+}
+
+input#email_cadastrar {
+    height: 23px;
+    font-size: 10px;
+}
+
+input#senha_cadastrar {
+    height: 23px;
+    font-size: 10px;
+}
+
+button#cadastrar_usuario {
+
+    height: 23px;
+    font-size: 10px;
+
+}
+
+div#div_btn_fechar {
+    height: 28px;
+}
+
+div#div_formulario_login {
+    margin-top: 20px;
+}
+
+a#link_recuperar_senha {
+    font-size: 12px;
+}
+
+p#erros {
+    font-size: 10px;
+}
+
+/*     Meu horario */
+
+button#desmarcar_horario {
+    height: 30px;
+    font-size: 10px;
+}
+
+/* home */
+
+button.btn_hora {
+
+    height: 20px;
+    font-size: 12px;
+
+}
+
+h4#titulo {
+
+    font-size: 18px;
+
+}
+ul.pagination {
+    height: 30px;
+    font-size: 12px;
+}
+
+}
+
+
+@media(max-width: 1075px) {
+
+/* todos horarios */
+
+button#excluir {
+
+    height: 30px;
+    font-size: 12px;
+}
+
+button#desmarcar {
+
+    height: 30px;
+    font-size: 12px;
+}
+
+button#editar {
+
+    height: 30px;
+    font-size: 12px;
+}
+
+button.btn_hora {
+
+    height: 30px;
+    font-size: 12px;
+}
+
+ul.pagination {
+    height: 30px;
+    font-size: 12px;
+}
+
+h5 {
+    font-size: 15px;
+}
+}
