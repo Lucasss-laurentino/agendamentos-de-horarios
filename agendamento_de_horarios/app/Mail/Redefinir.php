@@ -33,6 +33,6 @@ class redefinir extends Mailable
      */
     public function build()
     {
-        return $this->from('desenvolvedorphptestes@gmail.com')->markdown('redefinir_senha');
+        return $this->from('Seu email aqui')->markdown('redefinir_senha');
     }
 }
